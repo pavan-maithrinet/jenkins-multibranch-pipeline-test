@@ -7,7 +7,7 @@ pipeline {
             def props = readProperties file: 'deploy.properties'
             def environment = props.environment
             map = props.map
-            prinln(map)
+            echo map
             
             /*
             withCredentials([
