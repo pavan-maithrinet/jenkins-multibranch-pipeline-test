@@ -1,5 +1,15 @@
-def map = [name: "Jerry", age: 42, city: "New York"]
-
-map["age"]
-println(map); 
-println(map["age"]); 
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+    }
+}
